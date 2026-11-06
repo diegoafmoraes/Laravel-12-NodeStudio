@@ -26,11 +26,11 @@
 
   <nav class="red">
     <div class="nav-wrapper container">
-      <a href="#" class="brand-logo center">Curso LARAVEL</a>
+      <a class="brand-logo center">Curso LARAVEL</a>
       <ul id="nav-mobile" class="leftt">
         <li><a href="{{ route('site.index') }}">Home</a></li>
         <li><a class="dropdown-trigger" data-target="dropdown1">Categorias <i class="material-icons right">expand_more</i> </a></li>
-        <li><a href="">Carrinho</a></li>
+        <li><a href="{{ route('site.carrinho') }}">Carrinho</a></li>
       </ul>
     </div>
   </nav>
@@ -48,7 +48,7 @@
                 <h5 class="white-text">Links</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="{{ route('site.index') }}">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Carrinho</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{ route('site.carrinho') }}">Carrinho</a></li>
                   <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
                 </ul>

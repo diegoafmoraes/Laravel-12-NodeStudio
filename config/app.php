@@ -139,4 +139,20 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    --------------------------------------------------------------------------
+    Class Aliases
+    --------------------------------------------------------------------------
+    *
+    * This array of class aliases will be registered when this application
+    * is started. However, feel free to register as many as you wish.
+    *
+    */
+
+    'aliases' => Illuminate\Support\Facades\Facade::defaultAliases()->merge([
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
+    ])->toArray(),
+
+
+
 ];

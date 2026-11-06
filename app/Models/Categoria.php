@@ -9,4 +9,7 @@ class Categoria extends Model
 {
     //
     use HasFactory;
+
+    
+
 }
