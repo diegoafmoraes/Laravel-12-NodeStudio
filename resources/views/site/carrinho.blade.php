@@ -4,6 +4,17 @@
 
 <div class="row container">
 
+  @if($mensagem = Session::get('sucesso'))
+  
+  <div class="card green">
+        <div class="card-content white-text">
+          <span class="card-title">Paabéns!</span>
+          <p> {{ $mensagem }} </p>
+        </div>
+      </div>
+
+  @endif
+
   <h5>Seu carrinho possui {{ $itens->count() }} produtos: </h5>
   
     <table class="striped">
@@ -26,7 +37,9 @@
             <td><input type="number" style="width: 40px; font-weight: 900" class="white center" name="quantity" value="{{ $item->quantity }}"></td>
             <td>
                 <button class="btn-floating waves-effect waves-light orange"><i class="material-icons">refresh</i></button>
-                <button class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
+
+           
+
             </td>
           </tr>
           @endforeach

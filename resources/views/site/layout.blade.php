@@ -30,7 +30,8 @@
       <ul id="nav-mobile" class="leftt">
         <li><a href="{{ route('site.index') }}">Home</a></li>
         <li><a class="dropdown-trigger" data-target="dropdown1">Categorias <i class="material-icons right">expand_more</i> </a></li>
-        <li><a href="{{ route('site.carrinho') }}">Carrinho</a></li>
+        <li><a href="{{ route('site.carrinho') }}"><!--<i class="material-icons">shopping_cart</i>-->Carrinho<span class="new badge blue" data-badge-caption="">{{ \Cart::getContent()->count() }}</span></a>
+        </li>
       </ul>
     </div>
   </nav>
