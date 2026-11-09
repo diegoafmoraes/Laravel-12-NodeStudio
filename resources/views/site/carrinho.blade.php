@@ -15,7 +15,14 @@
 
   @endif
 
-  <h5>Seu carrinho possui {{ $itens->count() }} produtos: </h5>
+  <h5>Seu carrinho possui {{ $itens->count() }} 
+    @if($itens->count() > 1)
+      produtos
+    @else
+      produto
+    @endif
+    :   
+  </h5>
   
     <table class="striped">
         <thead>
@@ -38,7 +45,11 @@
             <td>
                 <button class="btn-floating waves-effect waves-light orange"><i class="material-icons">refresh</i></button>
 
-           
+                <form action="{{ route('site.removecarrinho') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" name="id" value="{{ $item->id }}">
+                  <button class="btn-floating waves-effect waves-light red"><i class="material-icons">delete</i></button>
+                </form>
 
             </td>
           </tr>
